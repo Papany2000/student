@@ -1,13 +1,13 @@
 import React  from 'react'
 import Post from '../Post/Post'
 
-const PostList = function({posts, title}) {
+const PostList = function(props) {
 
 return <div>
    <h1 style = {{textAlign: 'center'}}>
-            {title}
+            {props.title}
       </h1>
-           {posts.map((post, index) => <Post number = {index +1} post = {post} key = {post.id}/>)}
+           {props.posts.map((post, index) => <Post remove = {props.remove} number = {index +1} post = {post} key = {post.id}/>)}
   
 </div>
 }

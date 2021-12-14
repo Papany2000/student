@@ -14,7 +14,7 @@ return <div>
       </div>
     
       <div className = 'post__btn'>
-        <MyButton>Удалить</MyButton>
+        <MyButton  onClick = {() => props.remove(props.post)}>Удалить пост</MyButton>
       </div>
     </div>
 </div>

@@ -3,14 +3,14 @@ import MyButton from './Ui/Button/MyButton'
 import MyInput from './Ui/Input/MyInput'
 
 
-const PostForm = ({create}) => {
+const PostForm = (props) => {
 const [post, setPost] = useState({title: '', body: ''})
 const addNewPost = (e) =>{
     e.preventDefault()
     const newPost = {
         ...post, id: Date.now()
     }
-    create(newPost)
+    props.create(newPost)
     setPost({title: '', body: ''})
 }
 return(
